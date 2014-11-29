@@ -4,23 +4,21 @@
  * and open the template in the editor.
  */
 
-package domen;
-
-import domen.tematskeJedinice.TematskeJedinice;
+package share;
 
 /**
  *
  * @author Mihailo
  */
-public class Predmet {
+public class Share {
     
-    private String naziv;
-    private int ESPB;
-    private FondCasova fondCasova;
-    private TematskeJedinice tematskeJedinice;
-    private Katedra katedra;
+    private static Share instance = null;
     
-    
+    public Share getInstance () {
+        if (instance == null)
+            instance = new Share();
+        return instance;
+    }
     
     
     
