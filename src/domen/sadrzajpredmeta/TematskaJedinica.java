@@ -33,6 +33,12 @@ public class TematskaJedinica {
         TematskaJedinica tj = (TematskaJedinica)obj;
         return naziv.equals(tj.naziv);
     }
+
+    @Override
+    public String toString() {
+        return naziv;
+    }
+    
     
     
     

@@ -28,6 +28,15 @@ public class Predmet {
     private FondCasova fondCasova;
     private List<String> metodeNastave;
 
+    public Predmet(String naziv) {
+        this.naziv = naziv;
+    }
+
+    @Override
+    public String toString() {
+        return naziv;
+    }
+
     
     
     

@@ -6,9 +6,10 @@
 
 package forme;
 
+import java.awt.BorderLayout;
 import java.awt.HeadlessException;
 import javax.swing.JPanel;
-import paneli.DodatniPodaciPanel;
+import paneli.DodatniPodaciStabloPanel;
 
 /**
  *
@@ -23,11 +24,14 @@ public class GlavnaiForma extends javax.swing.JFrame {
         initComponents();
     }
 
-    public GlavnaiForma(JPanel pnlRight){
+    public GlavnaiForma(JPanel pnlLeft, JPanel pnlRight){
         initComponents();
-        this.pnlRight = pnlRight;
+        this.pnlRight.add(pnlRight, BorderLayout.CENTER);
+        this.pnlLeft.add(pnlLeft, BorderLayout.CENTER);
         
     }
+    
+    
     
     
 
@@ -49,52 +53,19 @@ public class GlavnaiForma extends javax.swing.JFrame {
         pnlLeft.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pnlLeft.setMinimumSize(new java.awt.Dimension(200, 0));
         pnlLeft.setPreferredSize(new java.awt.Dimension(300, 475));
-
-        javax.swing.GroupLayout pnlLeftLayout = new javax.swing.GroupLayout(pnlLeft);
-        pnlLeft.setLayout(pnlLeftLayout);
-        pnlLeftLayout.setHorizontalGroup(
-            pnlLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
-        );
-        pnlLeftLayout.setVerticalGroup(
-            pnlLeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 471, Short.MAX_VALUE)
-        );
-
+        pnlLeft.setLayout(new java.awt.BorderLayout());
         getContentPane().add(pnlLeft, java.awt.BorderLayout.LINE_START);
 
         pnlRight.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pnlRight.setMinimumSize(new java.awt.Dimension(200, 0));
         pnlRight.setPreferredSize(new java.awt.Dimension(300, 475));
-
-        javax.swing.GroupLayout pnlRightLayout = new javax.swing.GroupLayout(pnlRight);
-        pnlRight.setLayout(pnlRightLayout);
-        pnlRightLayout.setHorizontalGroup(
-            pnlRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
-        );
-        pnlRightLayout.setVerticalGroup(
-            pnlRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 471, Short.MAX_VALUE)
-        );
-
+        pnlRight.setLayout(new java.awt.BorderLayout());
         getContentPane().add(pnlRight, java.awt.BorderLayout.LINE_END);
 
         pnlCenter.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pnlCenter.setMinimumSize(new java.awt.Dimension(200, 0));
         pnlCenter.setPreferredSize(new java.awt.Dimension(300, 475));
-
-        javax.swing.GroupLayout pnlCenterLayout = new javax.swing.GroupLayout(pnlCenter);
-        pnlCenter.setLayout(pnlCenterLayout);
-        pnlCenterLayout.setHorizontalGroup(
-            pnlCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 351, Short.MAX_VALUE)
-        );
-        pnlCenterLayout.setVerticalGroup(
-            pnlCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 471, Short.MAX_VALUE)
-        );
-
+        pnlCenter.setLayout(new java.awt.BorderLayout());
         getContentPane().add(pnlCenter, java.awt.BorderLayout.CENTER);
 
         pack();
