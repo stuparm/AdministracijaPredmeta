@@ -4,14 +4,18 @@
  * and open the template in the editor.
  */
 
-package paneli.modeli;
-
-import javax.swing.tree.TreeModel;
+package domen.katedra;
 
 /**
  *
  * @author Mihailo
  */
-public class StabloModel {
+public class Nastavnik {
+    
+    private String ime;
+    private String prezime;
+    private String srednjeSlovo;
+    private String uloga;
+    
     
 }

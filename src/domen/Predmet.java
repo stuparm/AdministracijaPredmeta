@@ -6,7 +6,11 @@
 
 package domen;
 
-import domen.tematskeJedinice.TematskeJedinice;
+import domen.fondcasova.FondCasova;
+import domen.katedra.Katedra;
+import domen.literatura.Literatura;
+import domen.sadrzajpredmeta.SadrzajPredmeta;
+import java.util.List;
 
 /**
  *
@@ -15,10 +19,15 @@ import domen.tematskeJedinice.TematskeJedinice;
 public class Predmet {
     
     private String naziv;
-    private int ESPB;
-    private FondCasova fondCasova;
-    private TematskeJedinice tematskeJedinice;
     private Katedra katedra;
+    private int brojESPB;
+    private String ciljPredmeta;
+    private String ishodPredmeta;
+    private SadrzajPredmeta sadrzajPredmeta;
+    private Literatura literatura;
+    private FondCasova fondCasova;
+    private List<String> metodeNastave;
+
     
     
     

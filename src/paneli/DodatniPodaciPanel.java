@@ -6,19 +6,35 @@
 
 package paneli;
 
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTree;
+import javax.swing.tree.TreeModel;
+import paneli.modeli.SadrzajPredmetaTreeModel;
+
 /**
  *
  * @author Mihailo
  */
-public class KartonPredmetaPanel extends javax.swing.JPanel {
+public class DodatniPodaciPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form KartonPredmetaPanel
      */
-    public KartonPredmetaPanel() {
+    public DodatniPodaciPanel() {
         initComponents();
     }
 
+    private SadrzajPredmetaTreeModel model;
+
+    public DodatniPodaciPanel(SadrzajPredmetaTreeModel model) {
+        this.model = model;
+        initComponents();
+        stablo.setModel(model);
+        
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,7 +47,7 @@ public class KartonPredmetaPanel extends javax.swing.JPanel {
         pnlNorth = new javax.swing.JPanel();
         pnlCenter = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTree2 = new javax.swing.JTree();
+        stablo = new javax.swing.JTree();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -50,7 +66,7 @@ public class KartonPredmetaPanel extends javax.swing.JPanel {
 
         pnlCenter.setLayout(new java.awt.BorderLayout());
 
-        jScrollPane2.setViewportView(jTree2);
+        jScrollPane2.setViewportView(stablo);
 
         pnlCenter.add(jScrollPane2, java.awt.BorderLayout.CENTER);
 
@@ -60,8 +76,8 @@ public class KartonPredmetaPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTree jTree2;
     private javax.swing.JPanel pnlCenter;
     private javax.swing.JPanel pnlNorth;
+    private javax.swing.JTree stablo;
     // End of variables declaration//GEN-END:variables
 }

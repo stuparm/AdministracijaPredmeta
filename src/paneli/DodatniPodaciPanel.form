@@ -57,7 +57,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTree" name="jTree2">
+            <Component class="javax.swing.JTree" name="stablo">
             </Component>
           </SubComponents>
         </Container>

@@ -4,12 +4,15 @@
  * and open the template in the editor.
  */
 
-package domen;
+package domen.literatura;
 
 /**
  *
  * @author Mihailo
  */
-public class FondCasova {
+public class Knjiga {
+    
+    private String naziv;
+    private String autor;
     
 }

@@ -6,18 +6,30 @@
 
 package forme;
 
+import java.awt.HeadlessException;
+import javax.swing.JPanel;
+import paneli.DodatniPodaciPanel;
+
 /**
  *
  * @author Mihailo
  */
-public class PredmetiForma extends javax.swing.JFrame {
+public class GlavnaiForma extends javax.swing.JFrame {
 
     /**
      * Creates new form PredmetiForma
      */
-    public PredmetiForma() {
+    public GlavnaiForma() {
         initComponents();
     }
+
+    public GlavnaiForma(JPanel pnlRight){
+        initComponents();
+        this.pnlRight = pnlRight;
+        
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,6 +47,7 @@ public class PredmetiForma extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         pnlLeft.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        pnlLeft.setMinimumSize(new java.awt.Dimension(200, 0));
         pnlLeft.setPreferredSize(new java.awt.Dimension(300, 475));
 
         javax.swing.GroupLayout pnlLeftLayout = new javax.swing.GroupLayout(pnlLeft);
@@ -51,6 +64,7 @@ public class PredmetiForma extends javax.swing.JFrame {
         getContentPane().add(pnlLeft, java.awt.BorderLayout.LINE_START);
 
         pnlRight.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        pnlRight.setMinimumSize(new java.awt.Dimension(200, 0));
         pnlRight.setPreferredSize(new java.awt.Dimension(300, 475));
 
         javax.swing.GroupLayout pnlRightLayout = new javax.swing.GroupLayout(pnlRight);
@@ -67,13 +81,14 @@ public class PredmetiForma extends javax.swing.JFrame {
         getContentPane().add(pnlRight, java.awt.BorderLayout.LINE_END);
 
         pnlCenter.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        pnlCenter.setMinimumSize(new java.awt.Dimension(200, 0));
         pnlCenter.setPreferredSize(new java.awt.Dimension(300, 475));
 
         javax.swing.GroupLayout pnlCenterLayout = new javax.swing.GroupLayout(pnlCenter);
         pnlCenter.setLayout(pnlCenterLayout);
         pnlCenterLayout.setHorizontalGroup(
             pnlCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 322, Short.MAX_VALUE)
+            .addGap(0, 351, Short.MAX_VALUE)
         );
         pnlCenterLayout.setVerticalGroup(
             pnlCenterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,23 +117,28 @@ public class PredmetiForma extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PredmetiForma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GlavnaiForma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PredmetiForma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GlavnaiForma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PredmetiForma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GlavnaiForma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PredmetiForma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GlavnaiForma.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PredmetiForma().setVisible(true);
+                new GlavnaiForma().setVisible(true);
             }
         });
     }
+    
+    
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel pnlCenter;

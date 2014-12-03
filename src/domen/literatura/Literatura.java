@@ -4,12 +4,17 @@
  * and open the template in the editor.
  */
 
-package domen;
+package domen.literatura;
+
+import java.util.List;
 
 /**
  *
  * @author Mihailo
  */
-public class Katedra {
+public class Literatura {
+    
+    private List<Knjiga> osnovnaLiteratura;
+    private List<Knjiga> dopunskaLiteratura;
     
 }
