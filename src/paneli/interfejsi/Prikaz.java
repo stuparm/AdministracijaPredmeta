@@ -4,18 +4,17 @@
  * and open the template in the editor.
  */
 
-package domen.katedra;
+package paneli.interfejsi;
 
 /**
  *
  * @author Mihailo
  */
-public class Nastavnik {
+public interface Prikaz {
     
-    private String ime;
-    private String prezime;
-    private String srednjeSlovo;
-    private String uloga;
+    public void nastalaIzmena();
+    public void obrisiSve();
+    
     
     
 }

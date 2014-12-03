@@ -4,16 +4,18 @@
  * and open the template in the editor.
  */
 
-package domen.katedra;
-
-import java.util.List;
+package domen.osoblje;
 
 /**
  *
  * @author Mihailo
  */
-public class Katedra {
+public class Nastavnik {
     
-    private List<Nastavnik> nastavnoOsoblje;
+    private String ime;
+    private String prezime;
+    private String srednjeSlovo;
+    private String uloga;
+    
     
 }

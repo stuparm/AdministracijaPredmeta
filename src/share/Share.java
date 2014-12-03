@@ -6,6 +6,10 @@
 
 package share;
 
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Mihailo
@@ -19,6 +23,13 @@ public class Share {
             instance = new Share();
         return instance;
     }
+    
+    private Map<Class,Object> map;
+    
+    private Share () {
+        map = new HashMap<>();
+    }
+    
     
     
     
